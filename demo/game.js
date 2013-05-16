@@ -1,12 +1,13 @@
 CAAT.DEBUG = true;
 
-var director = new CAAT.Director().initialize(400, 200, document.getElementById('canvas'));
+var director = new CAAT.Director().initialize(600, 400, document.getElementById('canvas'));
 var scene = director.createScene();
 
 
 new CAAT.ImagePreloader().loadImages(
     [
         {id: 'sprites', url: 'sprites/sprites.png'},
+        {id: 'individual_frame', url: 'sprites/frames/martian_01.png'},
     ],
     function(counter, images) {
 
@@ -79,12 +80,24 @@ new CAAT.ImagePreloader().loadImages(
                                               sprite_list.sprites
                                       );
 
+            var text1 = new CAAT.TextActor()
+              .setFont("14px sans-serif")
+              .setFillStyle('black')
+              .setText("Sprite with individual frame")
+              .setPosition(2, 20)
+              .cacheAsBitmap();
+
+            var text2 = new CAAT.TextActor()
+              .setFont("14px sans-serif")
+              .setFillStyle('black')
+              .setText("Sprite with individual frame")
+              .setPosition(250, 20)
+              .cacheAsBitmap();
+
             var actor1 = new CAAT.Foundation.Actor();
             var actor2 = new CAAT.Foundation.Actor();
 
-            actor1.setBackgroundImage(sprite_sheet)
-                                    .setAnimationImageIndex(["martian_02", "martian_03"])
-                                    .setChangeFPS(100)
+            actor1.setBackgroundImage(director.getImage('individual_frame'))
                                     .setPosition(50, 50)
                                     .enableEvents(false);
 
@@ -95,8 +108,21 @@ new CAAT.ImagePreloader().loadImages(
                                     .setPosition(250, 50)
                                     .enableEvents(false);
 
+            var rotating_behavior= new CAAT.RotateBehavior().
+                                      setCycle(true).
+                                      setFrameTime( 0, 2000 ).
+                                      setValues(0, 2*Math.PI, 0.5, 0.5);
+
+            actor1.addBehavior(rotating_behavior);
+            actor2.addBehavior(rotating_behavior);
+
+
+
             scene.addChild(actor1);
             scene.addChild(actor2);
+
+            scene.addChild(text1);
+            scene.addChild(text2);
         }
 });
  
