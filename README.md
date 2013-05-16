@@ -17,3 +17,12 @@ this value to the toplevel git directory (NOT to the caatexporter
 sundirectory).
 
 
+demo screenshot
+---------------
+
+![](https://raw.github.com/hugoruscitti/texturepacker-caat-exporter/master/screenshots/demo.png)
+
+texturepacker and this exporter in action
+-----------------------------------------
+
+![](https://raw.github.com/hugoruscitti/texturepacker-caat-exporter/master/screenshots/texturepacker.png)
