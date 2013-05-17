@@ -22,6 +22,8 @@ Demo screenshot
 
 ![](https://raw.github.com/hugoruscitti/texturepacker-caat-exporter/master/screenshots/demo.png)
 
+Check out the demo in the repository! (Contributed by Hugo Ruscitti.)
+
 TexturePacker and this exporter in action
 -----------------------------------------
 
