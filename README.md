@@ -1,4 +1,4 @@
-texturepacker-caat-exporter
+TexturePacker CAAT exporter
 ===========================
 
 TexturePacker exporter for CAAT - the Canvas Advanced Animation Toolkit
@@ -17,12 +17,12 @@ this value to the toplevel git directory (NOT to the caatexporter
 sundirectory).
 
 
-demo screenshot
+Demo screenshot
 ---------------
 
 ![](https://raw.github.com/hugoruscitti/texturepacker-caat-exporter/master/screenshots/demo.png)
 
-texturepacker and this exporter in action
+TexturePacker and this exporter in action
 -----------------------------------------
 
 ![](https://raw.github.com/hugoruscitti/texturepacker-caat-exporter/master/screenshots/texturepacker.png)
